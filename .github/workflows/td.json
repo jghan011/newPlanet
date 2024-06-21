@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:367768608535:task-definition/app:1",
     "containerDefinitions": [
         {
             "name": "app",
@@ -24,37 +23,9 @@
     "taskRoleArn": "arn:aws:iam::367768608535:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::367768608535:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        }
-    ],
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2024-06-20T22:43:43.790Z",
-    "registeredBy": "arn:aws:iam::367768608535:user/Jays",
     "tags": []
 }
