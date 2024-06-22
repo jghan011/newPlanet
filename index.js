@@ -38,3 +38,6 @@ fs.createReadStream("kepler_data.csv")
 //parse only knows about streams
 //we want keys and corresponding  values and the require('csv-parse') allows us to do that
 //.pipe connects the readable stream source to writeable strnig destination so the kepler file is the source and parse function is the destination...and the result we want is a series of processed rows
+//
+
+//
