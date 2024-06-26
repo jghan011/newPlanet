@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:367768608535:task-definition/app",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:367768608535:service/app_cluster/app_service",
     "containerDefinitions": [
       {
         "name": "app",
