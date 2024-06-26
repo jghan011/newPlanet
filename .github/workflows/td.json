@@ -4,6 +4,7 @@
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512",
+    "executionRoleArn":"arn:aws:iam::367768608535:user/Jayfree",
     "containerDefinitions": [
       {
         "name": "app_repo",
