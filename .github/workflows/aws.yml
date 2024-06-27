@@ -40,7 +40,10 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-
+          - name: Fill in the execution role ARN in the Amazon ECS task definition
+          run: |
+            ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+            sed -i 's|367768608535|'$ACCOUNT_ID'|g' ${{ env.ECS_TASK_DEFINITION }}
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def-1
         uses: aws-actions/amazon-ecs-render-task-definition@v1
