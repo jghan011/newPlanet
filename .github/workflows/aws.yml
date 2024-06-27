@@ -44,6 +44,8 @@ jobs:
         run: |
           ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
           sed -i 's|367768608535|'$ACCOUNT_ID'|g' ${{ env.ECS_TASK_DEFINITION }}
+        env:
+           ECS_TASK_DEFINITION: .github/workflows/td.json
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def-1
         uses: aws-actions/amazon-ecs-render-task-definition@v1
